@@ -1,0 +1,27 @@
+.notification-container {
+  top: 55px;
+  width: 300px;
+  min-width: 500px;
+}
+.notification-container-buttons {
+  display: flex; // Activa el modelo de flexbox
+  justify-content: space-between; // Espacia los elementos hacia los extremos
+  align-items: center; // Alinea verticalmente al centro
+  padding: 10px; // Espaciado interno
+  border-bottom: 1px solid #ddd; // Línea separadora inferior (opcional)}
+}
+
+.clear-button {
+    all: unset; 
+    color: red; 
+    font-size: 14px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+}
+.notifications-tittle{
+    margin: 0; 
+  font-size: 18px; 
+  font-weight: normal;
+  color: #333; 
+}

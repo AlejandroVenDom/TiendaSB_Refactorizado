@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<header class="header ">
+  <div class="logo-container d-flex align-items-center justify-content-center mt-3">
+    <img class="imagenLogo" src="/logo.svg" alt="">
+  </div>
+</header>
+<main class="container d-flex justify-content-center align-items-center main-container mb-5">
+  <section class="section-info container row gap-4">
+    <div class="d-flex row gap-3">
+      <i class="fa-solid fa-truck"></i>
+      <div>
+        <h4>Gestiona tus pedidos</h4>
+        <span>
+          Ten el control de todos tus pedidos y recibe notificaciones con el seguimiento
+        </span>
+      </div>
+    </div>
+    <div class="d-flex row gap-3">
+      <i class="fa-solid fa-circle-info"></i>
+      <div>
+        <h4>Lista de deseos personalizada</h4>
+        <span>
+          Guarda tus productos favoritos en las listas de deseos personalizadas
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="section-login container">
+    <form action="post"
+      class="w-100 m-auto mt-3 shadow-lg bg-white py-3 px-4 rounded-3 row gap-3 justify-content-center"
+      [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div>
+        <h4 class="">Crear Cuenta</h4>
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn btn-btn-light border border-2 w-75 border-light-subtle">Iniciar Sesión con Google</button>
+      </div>
+      <hr>
+      <div class="">
+        <input class="form-control form-control-sm" type="text" name="name" id="nombre" placeholder="Nombre de usuario*"
+          formControlName="username" required>
+      </div>
+      <div>
+        <input class="form-control form-control-sm" type="password" name="password" id="password"
+          placeholder="Contraseña*" formControlName="password" required>
+      </div>
+      <div class="">
+        <label class="form-label">Role en la aplicación</label>
+        <select class="form-select form-select-sm" formControlName="roleName">
+          <optgroup label="Seleccione una opción">
+            <option value="">-</option>
+            <option value="ADMIN">Administrador</option>
+            <option value="CLIENT">Cliente</option>
+            <option value="SELLER">Vendedor</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="">
+        <input class="form-control form-control-sm" type="text" formControlName="firstName" placeholder="Nombre">
+      </div>
+
+      <div class="">
+        <input class="form-control form-control-sm" type="text" formControlName="lastName" placeholder="Apellidos">
+      </div>
+
+      <div class="">
+        <input class="form-control form-control-sm" type="text" formControlName="address" placeholder="Dirección Postal">
+      </div>
+
+      <div>
+        <a href="">He olvidado mi Contraseña</a>
+      </div>
+      <button type="submit" [disabled]="registerForm.invalid" class="btn btn-info w-50 ">Crear Cuenta</button>
+      <span class="text-center">¿Ya tienes una cuenta?</span>
+      <a href="/login" class="btn btn-info w-50">Iniciar Sesión</a>
+
+    </form>
+  </section>
+</main>
