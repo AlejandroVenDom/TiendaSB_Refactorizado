@@ -1,7 +1,17 @@
 <<<<<<< HEAD
 # TiendaSB_Refactorizado
-Proyecto de Tienda en Angular (02-03-25), Refactorizado
 =======
+## Explicación de la funcionalidad del programa
+Este proyecto se basa en el funcionamiento de una tienda online inspirada en una de las tiendas mas famosas de tecnología en España (PCcomponentes). Este proyecto implementa varios fundamentos de la programación, como el uso de JWT para seguridad y tokens de la página, a la vez también de un uso de MVC y otras estructuras propias de un proyecto en Angular.
+
+Este proyecto se encuentra en fase de desarrollo y se ira implementando a lo largo del curso, las actuales funcionalidades de la web son:
+  - Página de Cliente tras iniciar sesión
+  - Página de Login y Registro con ayuda de Springboot
+  - Componente de error 
+
+
+
+
  Tipografías
   - Poppins
   - Montserrat
