@@ -44,8 +44,8 @@ export class GraphicSegundaCajaComponent implements OnInit{
 
   private setChartData(): void {
     const data = {
-      labels: ["Producto A", "Producto B", "Producto C", "Producto D"],
-      values: [10, 20, 15, 5]
+      labels: ["Producto A", "Producto B", "Producto C", "Producto D","Producto E", "Producto F", "Producto G"],
+      values: [10, 95, 55, 75,25,40,6]
     }
 
     this.barChartLabels = data.labels;

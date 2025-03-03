@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CredentialsService} from '../../services/auth/credentials.service';
 import {LoginInterface} from '../../services/interfaces/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private credentialsService: CredentialsService
+    private credentialsService: CredentialsService,
+    private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -36,7 +38,10 @@ export class LoginComponent {
     this.credentialsService.login(this.loginForm.value as LoginInterface).subscribe({
       next: (data) => {
         console.log(data);
+        this.router.navigate(['/app/control-panel']);
         alert("Bienvenido de vuelta");
+        
+
       },
       error: err => {
         console.log(err);
