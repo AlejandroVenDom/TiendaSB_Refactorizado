@@ -3,6 +3,7 @@ import {NgIf} from '@angular/common';
 import {TabNotificationComponent} from '../tabs/tab-notification/tab-notification.component';
 import {SidebarStatusService} from '../../services/status/sidebar-status.service';
 import {SettingsComponent} from '../tabs/settings/settings.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-backoffice',
@@ -28,6 +29,7 @@ export class HeaderBackofficeComponent {
 
   constructor(
     private sidebarStatusService: SidebarStatusService,
+    private router: Router
   ) {}
 
   // isActiveNotification: boolean = false;
@@ -47,6 +49,10 @@ export class HeaderBackofficeComponent {
       })
       this.isActiveItems[option] = true;
     }
+  }
+
+  goToProfile():void{
+    this.router.navigate(['/app/profile']);
   }
 
 }

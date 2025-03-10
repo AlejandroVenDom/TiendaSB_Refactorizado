@@ -1,5 +1,7 @@
 <div class="bg-dark h-100 py-3 sidebar-container" [class.hide-me]="!isActiveMenuHeader">
-<h2 class="text-white mb-3 text-end w-100 px-3 border-bottom border-white pb-2">Menú</h2>
+  <h2 class="text-white mb-3 text-end w-100 px-3 border-bottom border-white pb-2">Menú</h2>
+
+  <!-- Otras opciones del menú -->
   <p class="text-white text-end mb-3 px-4 d-flex flex-row flex-nowrap align-items-center justify-content-end column-gap-2">
     <span class="fs-6">Inicio</span> <i class="bi bi-house fs-5"></i>
   </p>
@@ -12,7 +14,9 @@
   <p class="text-white text-end mb-3 px-4 d-flex flex-row flex-nowrap align-items-center justify-content-end column-gap-2">
     <span class="fs-6">Productos</span> <i class="bi bi-cart fs-5"></i>
   </p>
-  <p class="text-white text-end mb-3 px-4 d-flex flex-row flex-nowrap align-items-center justify-content-end column-gap-2">
+
+  <!-- Opción de "Cerrar sesión" con evento click -->
+  <p class="text-white text-end mb-3 px-4 d-flex flex-row flex-nowrap align-items-center justify-content-end column-gap-2" (click)="closeSession()" style="cursor: pointer;">
     <span class="fs-6">Cerrar sesión</span> <i class="bi bi-power fs-5"></i>
   </p>
 </div>
