@@ -12,15 +12,15 @@ export interface UserInterface {
 
 export type LoginInterface = Pick<UserInterface, "username" | "password">
 
-export interface LoginResponse {
-  token: string;
-  user: { id: number; name: string; email: string };
-}
+// export interface LoginResponse {
+//   token: string;
+//   user: { id: number; name: string; email: string };
+// }
 
-export interface RegisterResponse {
-  message: string;
-  user: { id: number; name: string; email: string };
-}
+// export interface RegisterResponse {
+//   message: string;
+//   user: { id: number; name: string; email: string };
+// }
 
 
 

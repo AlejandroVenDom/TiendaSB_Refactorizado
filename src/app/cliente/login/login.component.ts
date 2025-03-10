@@ -3,6 +3,9 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 import {CredentialsService} from '../../services/auth/credentials.service';
 import {LoginInterface} from '../../services/interfaces/auth';
 import { Router } from '@angular/router';
+import { TokenService } from '../../services/auth/token.service';
+import { UseStateService } from '../../services/auth/use-state.service';
+import { PopupService } from '../../services/utils/popup.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +24,10 @@ export class LoginComponent {
   constructor(
     private formBuilder: FormBuilder,
     private credentialsService: CredentialsService,
-    private router: Router
+    private router: Router,
+    private tokenService: TokenService,
+    private useStateService: UseStateService,
+    private popupService: PopupService
   ) {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -37,15 +43,31 @@ export class LoginComponent {
 
     this.credentialsService.login(this.loginForm.value as LoginInterface).subscribe({
       next: (data) => {
-        console.log(data);
-        this.router.navigate(['/app/control-panel']);
-        alert("Bienvenido de vuelta");
-        
+        this.popupService.loader("Cargando...", "Espere un momento");
+
+        setTimeout(() => {
+          this.tokenService.saveTokens(data.token, "234325423423")
+          this.useStateService.save(data.username, data.role)
+          this.popupService.close();
+          this.router.navigate(['/app/control-panel']);
+        }, 1500)
 
       },
       error: err => {
-        console.log(err);
-        alert("Credenciales incorrectas, usted no esta registrado cholo de mierda, registrese negro");
+        let message;
+        if (err.error == "Invalid password") {
+          message = "Contraseña incorrecta, inténtelo de nuevo."
+        }
+        else if (err.error == "User not found") {
+          message = "El usuario no existe. Compruebe los datos o registrate en la plataforma"
+        }
+        else {
+          message = err.error;
+        }
+
+        this.popupService.showMessage(
+          'Ups ha ocurrido un error', message, 'error'
+        );
       }
     })
   }

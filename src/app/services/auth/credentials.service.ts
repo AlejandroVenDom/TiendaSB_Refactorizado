@@ -5,27 +5,24 @@ import { environment } from '../../../environments/environment';
 import {
   LoginInterface,
   UserInterface,
-  LoginResponse,
-  RegisterResponse,
+
 } from '../interfaces/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CredentialsService {
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+  ) { }
 
-  login(credentials: LoginInterface): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(
-      `${environment.apiUrl}/users/login`,
-      credentials
-    );
+  login(credentials: LoginInterface): Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}/users/login`, credentials)
   }
 
-  register(userData: UserInterface): Observable<RegisterResponse> {
-    return this.http.post<RegisterResponse>(
-      `${environment.apiUrl}/users/register`,
-      userData
-    );
+
+  register(userData: UserInterface): Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}/users/register`, userData)
   }
+
 }
