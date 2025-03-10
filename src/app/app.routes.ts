@@ -1,8 +1,6 @@
 import {Routes} from '@angular/router';
-
 import {LayoutComponent} from './cliente/layout/layout.component';
 import {LayoutBackComponent} from './backoffice/layout/layout.component';
-
 import {HomeComponent} from './cliente/home/home.component';
 import {LoginComponent} from './cliente/login/login.component';
 import {RegistroComponent} from './cliente/registro/registro.component';
