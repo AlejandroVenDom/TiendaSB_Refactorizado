@@ -33,5 +33,6 @@ export class UseStateService {
 
   removeSession(): void {
     sessionStorage.removeItem(this.USER_KEY);
+    
   }
 }
