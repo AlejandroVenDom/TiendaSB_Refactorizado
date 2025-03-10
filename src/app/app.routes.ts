@@ -9,6 +9,8 @@ import {RegistroComponent} from './cliente/registro/registro.component';
 import {TiendaComponent} from './cliente/tienda/tienda.component';
 import {ControlPanelComponent} from './backoffice/control-panel/control-panel.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { authGuard } from './services/guards/auth.guard';
+import { publicGuard } from './services/guards/public.guard';
 
 export const routes: Routes = [
 
@@ -17,15 +19,15 @@ export const routes: Routes = [
   {
     path: "", component: LayoutComponent, children: [ // -> www.ejemplo.com
       {path: "", component: HomeComponent}, // -> www.ejemplo.com
-      {path: "login", component: LoginComponent}, // -> www.ejemplo.com/login
-      {path: "registro", component: RegistroComponent}, // -> www.ejemplo.com/registro
+      {path: "login", component: LoginComponent, canActivate: [publicGuard]}, // -> www.ejemplo.com/login
+      {path: "registro", component: RegistroComponent, canActivate: [publicGuard]}, // -> www.ejemplo.com/registro
       {path: "tienda", component: TiendaComponent}, // www.ejemplo.com/tienda
     ]
   },
   // backoffice
   // www.ejemplo.com/app
   {
-    path: "app", component: LayoutBackComponent, children: [ // -> www.ejemplo.com/app
+    path: "app", canActivate: [authGuard], component: LayoutBackComponent, children: [ // -> www.ejemplo.com/app
       // www.ejemplo.com/app -> no hay parámetros después del app, por lo tanto angular buscar dentro de esta sección de children el path que esté vacío ""
 
       {path: "", redirectTo: "control-panel", pathMatch: "full"}, // -> www.ejemplo.com/app
