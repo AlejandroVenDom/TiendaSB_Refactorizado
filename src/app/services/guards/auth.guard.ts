@@ -22,7 +22,7 @@ export const authGuard: CanActivateFn = async (route, state) => {
   try {
     const response: any = await firstValueFrom(
       http.post(`${environment.apiUrl}/users/check-token`,{
-        usrname: "Alejandro",
+        username: "Alejandro",
         token: accessToken,
       })
     )

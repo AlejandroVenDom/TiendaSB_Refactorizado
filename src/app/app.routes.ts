@@ -9,6 +9,7 @@ import {ControlPanelComponent} from './backoffice/control-panel/control-panel.co
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import { authGuard } from './services/guards/auth.guard';
 import { publicGuard } from './services/guards/public.guard';
+import { ProfileComponent } from './backoffice/profile/profile.component';
 
 export const routes: Routes = [
 
@@ -30,6 +31,7 @@ export const routes: Routes = [
 
       {path: "", redirectTo: "control-panel", pathMatch: "full"}, // -> www.ejemplo.com/app
       {path: "control-panel", component: ControlPanelComponent}, // -> www.ejemplo.com/app/control-panel
+      { path : "profile", component: ProfileComponent }
     ]
   },
 
