@@ -4,12 +4,14 @@ import { TokenService } from '../auth/token.service';
 import { firstValueFrom } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { UseStateService } from '../auth/use-state.service';
 
 export const authGuard: CanActivateFn = async (route, state) => {
   
   const tokenService = inject(TokenService);
   const router = inject(Router);
   const http = inject(HttpClient);
+  const sessionStorage = inject(UseStateService);
 
   const accessToken = tokenService.getAccessToken();
   const refreshToken = tokenService.getAccessRefreshToken();
@@ -22,7 +24,7 @@ export const authGuard: CanActivateFn = async (route, state) => {
   try {
     const response: any = await firstValueFrom(
       http.post(`${environment.apiUrl}/users/check-token`,{
-        username: "Alejandro",
+        username: sessionStorage.getUsername(),
         token: accessToken,
       })
     )

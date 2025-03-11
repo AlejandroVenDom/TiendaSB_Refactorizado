@@ -11,9 +11,15 @@ export class ProfileComponent {
 
   username: string | null;
   role: string | null;
+  firstName: string | null ;
+  Address: string | null ;
+
 
   constructor(private useStateService: UseStateService) {
     this.username = this.useStateService.getUsername();
     this.role = this.useStateService.getRole();
+    this.firstName = this.useStateService.getFirstName();
+    this.Address = this.useStateService.getAddress();
+  
   }
 }

@@ -9,8 +9,8 @@ export class UseStateService {
 
   constructor() { }
 
-  save(username: string, role: string): void  {
-    sessionStorage.setItem(this.USER_KEY, JSON.stringify({username, role}));
+  save(username: string, role: string, firstName: string, lastName:string, address: string): void  {
+    sessionStorage.setItem(this.USER_KEY, JSON.stringify({username, role,firstName,lastName,address}));
   }
 
   getUsername(): string | null {
@@ -30,6 +30,28 @@ export class UseStateService {
 
     return session.role;
   }
+
+  getAddress(): string | null {
+    const session = JSON.parse(<string>sessionStorage.getItem(this.USER_KEY));
+    if (!session) {
+      return null;
+    }
+
+    return session.address;
+  }
+
+  getFirstName(): string | null {
+    const session = JSON.parse(<string>sessionStorage.getItem(this.USER_KEY));
+    if (!session) {
+      return null;
+    }
+
+    return session.firstName;
+  }
+
+
+
+
 
   removeSession(): void {
     sessionStorage.removeItem(this.USER_KEY);
