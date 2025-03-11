@@ -1,12 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <main class="container">
-    <div class="container" >
-        <section class="profile-data-container ">
-            <h2>usuario {{username}}</h2>
-            <p>rol {{role}}</p>
-            <p>nombre {{firstName}}</p>
-            <p>direccion {{Address}}</p>
-        </section>
-        <section></section>
-        <section></section>
+<section class="container" >
+    <div class="profile-data-container row ">
+
+        <div class="profileData container col-6">
+            <h1>¡Bienvenido {{username}}!</h1>
+            <p>Información del Usuario:</p>
+            <p>{{role}}</p>
+            <p>{{firstName}} {{lastName}}</p>
+        </div>
+        <div class="orderData col-6 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-user iconoUserProfile"></i>
+        </div>
     </div>
+</section>
+
+    <section></section>
+    <section></section>
+
 </main>

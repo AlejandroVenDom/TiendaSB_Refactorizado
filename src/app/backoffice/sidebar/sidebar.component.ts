@@ -29,6 +29,14 @@ export class SidebarComponent implements OnInit {
     })
   }
 
+  profileAdminSeller():void{
+    this.router.navigate(['/app/profile']);
+  }
+
+  mainPage():void{
+    this.router.navigate(['/app/control-panel']);
+  }
+
   closeSession(): void {
     this.popupService.loader(
       "Cerrando sesión",

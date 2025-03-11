@@ -49,6 +49,15 @@ export class UseStateService {
     return session.firstName;
   }
 
+  getLastName(): string | null {
+    const session = JSON.parse(<string>sessionStorage.getItem(this.USER_KEY));
+    if (!session) {
+      return null;
+    }
+
+    return session.lastName;
+  }
+
 
 
 

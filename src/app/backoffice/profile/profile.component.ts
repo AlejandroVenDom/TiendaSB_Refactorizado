@@ -12,6 +12,7 @@ export class ProfileComponent {
   username: string | null;
   role: string | null;
   firstName: string | null ;
+  lastName: string | null;
   Address: string | null ;
 
 
@@ -19,6 +20,7 @@ export class ProfileComponent {
     this.username = this.useStateService.getUsername();
     this.role = this.useStateService.getRole();
     this.firstName = this.useStateService.getFirstName();
+    this.lastName = this.useStateService.getLastName();
     this.Address = this.useStateService.getAddress();
   
   }
