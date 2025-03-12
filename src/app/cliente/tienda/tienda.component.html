@@ -1,1 +1,42 @@
-<p>tienda works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid py-0 my-0" style="cursor: po;" >
+      <a class="navbar-brand col-lg-6" (click)="homeRoute()" style="cursor: pointer;">
+        <img class="imagenLogo" src="/logo.svg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" (click)="perfilRoute()" style="cursor: pointer;">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cesta</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="buttonCloseSession nav-link border rounded mx-3 " style="cursor: pointer;" (click)="closeSession()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<main class="container">
+    <section class="container">
+        <div class="user-info container py-5">
+            <h1 class="text-center">¡Bienvenido de nuevo, {{username}}!</h1>
+        </div>
+    </section>
+    <section class="container">
+        <div class="OrangeProducts row">
+            <h2 class="col-9 d-flex align-items-center">¡Consigue ya las mejores ofertas de Días Naranjas!</h2>
+            <a style="cursor: pointer;" class="verOfertasLink col-3 d-flex align-items-center text-secondary">Ver ofertas 
+                <i class="mx-2 fa-solid fa-arrow-right d-flex align-items-center" ></i>  
+            </a>
+        </div>
+        <div></div>
+    </section>
+</main>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

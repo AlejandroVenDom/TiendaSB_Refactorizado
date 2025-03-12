@@ -11,7 +11,7 @@ export const roleAuthGuard: CanActivateFn = (route, state) => {
   const role = roleUser.getRole();
 
   if(role === 'CLIENT'){
-    router.navigate(['/home']);
+    router.navigate(['/tienda']);
     return false;
   }
   

@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UseStateService } from '../../services/auth/use-state.service';
-import { PopupService } from '../../services/utils/popup.service';
-import { TokenService } from '../../services/auth/token.service';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -13,38 +11,15 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  username: string|null;
-  
   constructor(
-    private tokenService: TokenService,
-    private popupService: PopupService,
-    private userStateService: UseStateService,
-    private router: Router
-  ){
-    this.username = this.userStateService.getUsername();
+    private router:Router,
+  ){}
+
+  iniciarSesion():void{
+    this.router.navigate(['/login'])
   }
 
-  homeRoute():void{
-    this.router.navigate(['/']);
+  registrarSesion():void{
+    this.router.navigate(['/registro'])
   }
-
-  perfilRoute():void{
-    this.router.navigate(['/clientProfile']);
-  }
-
-  closeSession():void{
-    this.popupService.loader(
-      "Cerrando sesión",
-      "Vuelva pronto"
-    );
-
-    this.tokenService.removeToken();
-    this.userStateService.removeSession()
-    setTimeout(() => {
-      this.popupService.close()
-      this.router.navigate(['/login']);
-    }, 1500)
-  }
-
-  
 }
