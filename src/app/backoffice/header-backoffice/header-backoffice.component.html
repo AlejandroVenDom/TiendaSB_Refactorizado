@@ -1,8 +1,8 @@
-<header class="row align-items-center bg-dark position-sticky top-0 px-4 m-auto">
+<header class="row align-items-center bg-dark position-sticky top-0 p-0 m-auto">
 
   <div class="col-6 d-flex flex-row align-items-center column-gap-3">
-    
     <div class="imagen-perfil position-relative rounded-circle bg-white d-flex align-items-center justify-content-center" style="cursor: pointer;"> <!-- Contenedor de la imagen de perfil -->
+      
       <i class="bi bi-person-fill text-black fs-4" (click)="goToProfile()" style="cursor: pointer;"></i>
       <span class="rounded-circle border border-2 position-absolute"></span>
     </div> <!-- fin-imagen-perfil -->
@@ -25,17 +25,19 @@
     </div> <!-- fin-ajustes -->
   </div>
 
-  <div class="col-6 d-flex flex-row align-items-center justify-content-end py-3 column-gap-3">
-    <div class="position-relative rounded-pill overflow-hidden search-container"> <!-- buscador -->
+  <div class="col-6  d-flex flex-row align-items-center justify-content-end py-3 column-gap-3">
+    <div class="position-relative d-none d-md-block rounded-pill overflow-hidden search-container"> <!-- buscador -->
       <i class="bi bi-search position-absolute icon-search bg-white d-flex align-items-center justify-content-center"></i>
-      <input type="text" class="form-control w-100 text-end" placeholder="Buscar..">
+      <input type="text" class="form-control w-100 text-end" placeholder="Buscador...">
     </div> <!-- // fin-buscador -->
-    <div class="icon-list-container"> <!-- menu -->
+
+    <div class="icon-list-container "> <!-- menu -->
       <i class="bi bi-list text-white fs-5" (click)="toggleLogo()"></i>
     </div> <!-- // fin-menu -->
-    <div class="position-relative logo-container d-flex align-items-center justify-content-center column-gap-3"> <!-- logo -->
-      <span class="text-white animate-width" *ngIf="isActive">Tienda Online</span>
-      <img src="/logo.svg" alt="">
+    <div class="position-relative logo-container p-0 d-flex align-items-center justify-content-center column-gap-3"> 
+      <!-- logo -->
+      <!-- <span class="text-white animate-width" *ngIf="isActive">Tienda Online</span> -->
+      
     </div> <!-- // fin-logo -->
   </div>
 
