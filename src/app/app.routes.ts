@@ -12,6 +12,9 @@ import { publicGuard } from './services/guards/public.guard';
 import { ProfileComponent } from './backoffice/profile/profile.component';
 import { roleAuthGuard } from './services/guards/role-auth.guard';
 import { ProfileClientComponent } from './cliente/profile-client/profile-client.component';
+import { ClientProductsComponent } from './cliente/client-products/client-products.component';
+import { ProductsBackofficeComponent } from './backoffice/products-backoffice/products-backoffice.component';
+import { CreateProductsComponent } from './backoffice/create-products/create-products.component';
 
 export const routes: Routes = [
 
@@ -23,7 +26,8 @@ export const routes: Routes = [
       {path: "login", component: LoginComponent, canActivate: [publicGuard]}, // -> www.ejemplo.com/login
       {path: "registro", component: RegistroComponent, canActivate: [publicGuard]}, // -> www.ejemplo.com/registro
       {path: "tienda", component: TiendaComponent}, // www.ejemplo.com/tienda
-      { path: "clientProfile", component: ProfileClientComponent }
+      { path: "clientProfile", component: ProfileClientComponent },
+      { path: "clientProducts", component: ClientProductsComponent }
     ]
   },
   // backoffice
@@ -34,7 +38,9 @@ export const routes: Routes = [
 
       {path: "", redirectTo: "control-panel", pathMatch: "full"}, // -> www.ejemplo.com/app
       {path: "control-panel", component: ControlPanelComponent}, // -> www.ejemplo.com/app/control-panel
-      { path : "profile", component: ProfileComponent }
+      { path : "profile", component: ProfileComponent },
+      { path: "productsBack", component: ProductsBackofficeComponent },
+      {path: "createProducts", component: CreateProductsComponent}
     ]
   },
 

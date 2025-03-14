@@ -1,3 +1,4 @@
+
 export interface UserInterface {
 
   username: string;
@@ -9,24 +10,16 @@ export interface UserInterface {
 
 }
 
+export interface ProductInterface {
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  tax: number;
+  currencyName: "EUR"|"USD";
+  userName?:string;
+}
+
 
 export type LoginInterface = Pick<UserInterface, "username" | "password">
-
-// export interface LoginResponse {
-//   token: string;
-//   user: { id: number; name: string; email: string };
-// }
-
-// export interface RegisterResponse {
-//   message: string;
-//   user: { id: number; name: string; email: string };
-// }
-
-
-
-// export type LoginInterface2 = Omit<UserInterface, "address" | "firstName" | "lastName" | "roleName">
-//
-// export interface LoginInterface3 extends UserInterface {
-//   email: string;
-// }
 

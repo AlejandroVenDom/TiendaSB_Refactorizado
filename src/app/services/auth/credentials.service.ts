@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   LoginInterface,
+  ProductInterface,
   UserInterface,
 
 } from '../interfaces/auth';
@@ -23,6 +24,19 @@ export class CredentialsService {
 
   register(userData: UserInterface): Observable<any> {
     return this.http.post<any>(`${environment.apiUrl}/users/register`, userData)
+  }
+
+  registerProduct(productData: ProductInterface, username:string):Observable<any>{
+    const body = {
+      ...productData,
+      userName: username
+    }
+    return this.http.post<any>(`${environment.apiUrl}/products/registerProduct`, body)
+  }
+
+  getAllProducts():Observable<ProductInterface[]>{
+    return this.http.get<ProductInterface[]>(`${environment.apiUrl}/products`)
+
   }
 
 }

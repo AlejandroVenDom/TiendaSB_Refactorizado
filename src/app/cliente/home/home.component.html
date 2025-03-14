@@ -9,13 +9,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link"  style="cursor: pointer;">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cesta</a>
-        </li>
-  
-        <li class="nav-item">
           <a class="buttonIniciarSession nav-link border rounded mx-3 " style="cursor: pointer;" (click)="iniciarSesion()">Iniciar Sesion</a>
         </li>
         
@@ -26,3 +19,29 @@
     </div>
   </div>
 </nav>
+
+<section class="hero text-center text-white py-5">
+  <div class="container">
+      <h1 class="display-4 fw-bold">La mejor solución para tu negocio</h1>
+      <p class="lead">Optimiza tus pagos y escala tu negocio con nuestra plataforma eficiente y segura.</p>
+      <a class="btn btn-light btn-lg" (click)="iniciarSesion()">Empieza ahora</a>
+  </div>
+</section>
+
+<section id="features" class="features py-5 bg-white text-center">
+  <div class="container d-flex flex-column flex-md-row justify-content-around">
+      <div class="feature p-3">
+          <h2>Pagos rápidos</h2>
+          <p>Procesa transacciones en segundos con total seguridad.</p>
+      </div>
+      <div class="feature p-3">
+          <h2>Fácil integración</h2>
+          <p>APIs y herramientas diseñadas para desarrolladores.</p>
+      </div>
+      <div class="feature p-3">
+          <h2>Soporte 24/7</h2>
+          <p>Estamos disponibles en todo momento para ayudarte.</p>
+      </div>
+  </div>
+</section>
+

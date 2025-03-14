@@ -1,0 +1,40 @@
+.container-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-form{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    border-radius: 10px;
+
+}
+
+.labels{
+    margin-top: 10px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+select{
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.crearProductoButton{
+    margin-bottom: 20px;
+}
+.crearProductoButton:hover{
+    transform: scaleZ(5.2);
+}
+.container-panel-buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

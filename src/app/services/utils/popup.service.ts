@@ -22,7 +22,7 @@ export class PopupService {
         popup: 'animate__animated animate__zoomIn', // Animación
         title: 'text-uppercase font-weight-bold', // Estilo de título
       },
-      timer: 5000, // Popup se cierra automáticamente después de 5 segundos
+      timer: 3000, // Popup se cierra automáticamente después de 5 segundos
     });
   }
 

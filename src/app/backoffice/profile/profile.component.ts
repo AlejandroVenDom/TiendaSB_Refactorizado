@@ -36,7 +36,7 @@ export class ProfileComponent {
   }
 
   backHome():void{
-    this.router.navigate(['/app/control-panel'])
+    this.router.navigate(['/app/control-panel']);
   }
 
   closeSession(): void {

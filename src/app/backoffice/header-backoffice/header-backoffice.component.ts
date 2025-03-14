@@ -4,6 +4,7 @@ import {TabNotificationComponent} from '../tabs/tab-notification/tab-notificatio
 import {SidebarStatusService} from '../../services/status/sidebar-status.service';
 import {SettingsComponent} from '../tabs/settings/settings.component';
 import { Router } from '@angular/router';
+import { UseStateService } from '../../services/auth/use-state.service';
 
 @Component({
   selector: 'app-header-backoffice',
@@ -18,6 +19,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderBackofficeComponent {
 
+  username: string|null;
   isActive: boolean = false;
 
   // Variables de tabs
@@ -29,8 +31,11 @@ export class HeaderBackofficeComponent {
 
   constructor(
     private sidebarStatusService: SidebarStatusService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private sessionStorage: UseStateService
+  ) {
+    this.username = this.sessionStorage.getUsername();
+  }
 
   // isActiveNotification: boolean = false;
 

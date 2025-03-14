@@ -20,6 +20,7 @@ export class LoginComponent {
 
 
   loginForm: FormGroup;
+  username:string|null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,6 +34,7 @@ export class LoginComponent {
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
     })
+    this.username = useStateService.getUsername();
   }
 
 
@@ -45,11 +47,12 @@ export class LoginComponent {
       next: (data) => {
         this.popupService.loader("Cargando...", "Espere un momento");
 
+        
         setTimeout(() => {
           this.tokenService.saveTokens(data.token, "234325423423")
           this.useStateService.save(data.username, data.role, data.firstName, data.lastName, data.address);
-          this.popupService.close();
           this.router.navigate(['/app/control-panel']);
+          this.popupService.close();
         }, 1500)
 
       },

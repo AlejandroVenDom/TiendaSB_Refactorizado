@@ -27,6 +27,10 @@ export class TiendaComponent {
     this.router.navigate(['/']);
   }
 
+  carritoRoute():void{
+    this.router.navigate(['/clientProducts']);
+  }
+
   perfilRoute():void{
     this.router.navigate(['/clientProfile']);
   }

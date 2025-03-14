@@ -13,6 +13,7 @@ import {Router} from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
 
+  username:string|null;
   isActiveMenuHeader: boolean = true;
   constructor(
     private sidebarStatusService: SidebarStatusService,
@@ -21,7 +22,10 @@ export class SidebarComponent implements OnInit {
     private userStateService: UseStateService,
     private router: Router,
   )
-  {}
+  {
+    this.username = this.userStateService.getUsername();
+
+  }
 
   ngOnInit(): void {
     this.sidebarStatusService.status$.subscribe(status => {
@@ -37,10 +41,16 @@ export class SidebarComponent implements OnInit {
     this.router.navigate(['/app/control-panel']);
   }
 
+  verMisProductos():void{
+    this.router.navigate(['/app/productsBack']);
+  }
+
   closeSession(): void {
+
+    
     this.popupService.loader(
-      "Cerrando sesión",
-      "Vuelva pronto"
+      "CERRANDO SESIÓN",
+      'VUELVE PRONTO '+ this.username
     );
 
     this.tokenService.removeToken();
