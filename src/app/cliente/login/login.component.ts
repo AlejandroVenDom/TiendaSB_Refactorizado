@@ -6,12 +6,14 @@ import { Router } from '@angular/router';
 import { TokenService } from '../../services/auth/token.service';
 import { UseStateService } from '../../services/auth/use-state.service';
 import { PopupService } from '../../services/utils/popup.service';
+import { FooterBackofficeComponent } from "../../backoffice/footer-backoffice/footer-backoffice.component";
 
 @Component({
   selector: 'app-login',
   imports: [
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    FooterBackofficeComponent
+],
   standalone: true,
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
