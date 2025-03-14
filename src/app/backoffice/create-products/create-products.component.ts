@@ -6,13 +6,15 @@ import { ProductInterface } from '../../services/interfaces/auth';
 import { TokenService } from '../../services/auth/token.service';
 import { Router } from '@angular/router';
 import { PopupService } from '../../services/utils/popup.service';
+import { FooterBackofficeComponent } from "../footer-backoffice/footer-backoffice.component";
 
 
 @Component({
   selector: 'app-create-products',
   imports: [
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    FooterBackofficeComponent
+],
   templateUrl: './create-products.component.html',
   styleUrl: './create-products.component.scss'
 })

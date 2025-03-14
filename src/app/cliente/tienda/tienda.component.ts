@@ -37,8 +37,8 @@ export class TiendaComponent {
 
   closeSession():void{
     this.popupService.loader(
-      "Cerrando sesión",
-      "Vuelva pronto"
+      "CERRANDO SESIÓN",
+      "Hasta pronto "+ this.username
     );
 
     this.tokenService.removeToken();

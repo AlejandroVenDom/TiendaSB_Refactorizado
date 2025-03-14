@@ -10,21 +10,20 @@
 
             <div class="profileData container col-12">
                 <div class="">
-                    <h2 style="font-weight: 900;">Información del Usuario:</h2>
+                    <h2 class="userInfoTitle" style="font-weight: 900;">Información del Usuario:</h2>
                 </div>
                 <div class="roleUser">
-                    <span class="tituloRole">Rol del usuario</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="tituloRole">Rol del usuario <i class="fa-solid fa-arrow-right"></i></span>
                     <span class="role">{{role}}</span>
                 </div>
                 <div class="username">
-                    <span class="tituloNombre">Nombre del usuario</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="tituloNombre">Nombre del usuario <i class="fa-solid fa-arrow-right"></i></span>
+                    
                     <span class="nombreUser">{{firstName}} {{lastName}}</span>
                 </div>
                 <div class="address ">
-                    <span class="tituloDireccion">Dirección del usuario</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="tituloDireccion">Dirección del usuario <i class="fa-solid fa-arrow-right"></i></span>
+                    
                     <span class="direccionUser">{{Address}}</span>
                 </div>
             </div>
@@ -32,16 +31,16 @@
     </section>
     <hr>
     <section class="container">
-        <div class="password-title">
-            <h2 class="" style="font-weight: 900;">Cambiar contraseña</h2>
+        <div class="">
+            <h2 class="password-title" style="font-weight: 900;">Cambiar contraseña</h2>
         </div>
-        <div class="container">
+        <div class="container password-container">
             <form action="" class="w-100 m-auto mt-3 shadow-lg bg-white py-3 px-4 rounded-3 row gap-3 justify-content-center mb-5">
                 <div>
                     <input class="form-control form-control-sm" type="password" name="password" id="password" placeholder="Nueva contraseña*" formControlName="password" required>
                 </div>
                 <div class="cambiarContraseña">
-                    <a href="#" class="btn btn-danger botonPassword">Cambiar Contraseña</a>
+                    <a class="btn btn-danger botonPassword"><i class="fa-solid fa-pen-to-square"></i> Cambiar Contraseña</a>
                 </div>
             </form>
         </div>
@@ -65,3 +64,4 @@
     </section>
 
 </main>
+<app-footer-backoffice></app-footer-backoffice>

@@ -3,11 +3,12 @@ import { UseStateService } from '../../services/auth/use-state.service';
 import { Router } from '@angular/router';
 import { PopupService } from '../../services/utils/popup.service';
 import { TokenService } from '../../services/auth/token.service';
+import { FooterBackofficeComponent } from "../footer-backoffice/footer-backoffice.component";
 
 
 @Component({
   selector: 'app-profile',
-  imports: [],
+  imports: [FooterBackofficeComponent],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
@@ -52,4 +53,6 @@ export class ProfileComponent {
       this.router.navigate(['/login']);
     }, 1500)
   }
+
+  
 }

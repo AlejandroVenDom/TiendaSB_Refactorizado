@@ -51,8 +51,8 @@ export class LoginComponent {
         setTimeout(() => {
           this.tokenService.saveTokens(data.token, "234325423423")
           this.useStateService.save(data.username, data.role, data.firstName, data.lastName, data.address);
-          this.router.navigate(['/app/control-panel']);
           this.popupService.close();
+          this.router.navigate(['/app/control-panel']);
         }, 1500)
 
       },

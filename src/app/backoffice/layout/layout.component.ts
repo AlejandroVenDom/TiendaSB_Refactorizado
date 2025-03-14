@@ -3,14 +3,16 @@ import {HeaderBackofficeComponent} from '../header-backoffice/header-backoffice.
 import {RouterOutlet} from '@angular/router';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {SidebarStatusService} from '../../services/status/sidebar-status.service';
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-layout',
   imports: [
     HeaderBackofficeComponent,
     RouterOutlet,
-    SidebarComponent
-  ],
+    SidebarComponent,
+   
+],
   standalone: true,
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'

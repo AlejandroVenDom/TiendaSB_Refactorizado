@@ -21,14 +21,14 @@
 }
 
 .botonPassword{
-    width: 200px;
+    width: 210px;
 }
 i{
     margin-right: 5px;
 }
 .cambiarContraseña{
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 .botonesProfile{
     display: flex;
@@ -40,4 +40,63 @@ i{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 470px) {
+    .botonPassword{
+        width: 150px;
+    }
+    .welcome{
+        font-size: 20px;
+    }
+    .botonesProfile{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .userInfoTitle{
+        font-size: 15px;
+    }
+    .tituloRole{
+        font-size: 13px;
+    }
+    i{
+        font-size: 13px;
+    }
+    .role{
+        font-size: 13px;
+    }
+    .roleUser{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .username{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tituloNombre{
+        font-size: 13px;
+    }
+    .nombreUser{
+        font-size: 13px;
+    }
+    .address{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tituloDireccion{
+        font-size: 13px;
+    }
+    .direccionUser{
+        font-size: 13px;
+    }
+    .password-title{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 980px) {
+    .password-container{
+        width: 70%;
+    }
 }

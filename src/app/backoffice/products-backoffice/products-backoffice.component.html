@@ -1,18 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <div class="container">
     <div class="container title-products">
         <span class="container-title">
             <h1 style="font-weight: 900;">Mis productos</h1>
         </span>
     </div>
-    <div class="container products">
 
+    <div class="products-card container">
+        <div class="card-container" *ngFor="let product of products">
+            <div class="card-image">
+                <img class="imagen-producto" src="/producto.jpg" alt="">
+            </div>
+            <hr>
+            <div class="card-info">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="card-price"> precio: {{ product.price }}</p>
+                <p class="card-tax">{{ product.tax }}</p>
+            </div>
+            <div class="card-buttons">
+                <button class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> editar</button>
+                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i> eliminar</button>
+            </div>
+            
+        </div>
     </div>
+
+
+
     <div class="container buttons-container">
         <div class="button-exit-container">
-            <button class="button-exit btn btn-primary" (click)="goBack()">vovler al inicio</button>
+            <button class="button-exit btn btn-primary" (click)="goBack()"><i class="fa-solid fa-arrow-left"></i> vovler al inicio</button>
         </div>
-        <div class="button-add-container" >
-            <button class="button-add btn btn-success" (click)="crearProducto()">crear Producto</button>
+        <div class="button-add-container">
+            <button class="button-add btn btn-success" (click)="crearProducto()"><i class="fa-regular fa-circle-up"></i> crear Producto</button>
         </div>
     </div>
 </div>
+
+<app-footer-backoffice></app-footer-backoffice>
