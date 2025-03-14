@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<app-header-cliente></app-header-cliente>
+<section class="buttons-container">
+    <button class="btn btnTienda" (click)="goToTienda()"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+</section>
+<section class="container info-container">
+    <div class="img-container">
+        <img src="/producto2.jpg" class="img-product" alt="">
+    </div>
+    <div class="description-container">
+        <h1 class="description">Ordenador Sobremesa PcCom Ready Intel Core i5-12400F / 32 GB / 1TB SSD / RTX 4060</h1>
+        <img src="/info.png" alt="" class="infoValorate">
+        <img src="/info2.png" alt="" class="infoValorate">
+        <div class="vendidoPor container">
+            <p class="vendidoTitle"><i class="fa-solid fa-truck-fast"></i> Vendido y enviado por PcComponentes</p>
+        </div>
+        <hr>
+        <div class="containerFinanciado">
+            <img src="/Financiado.png" alt="" class="imgFinanciado">
+        </div>
+        <hr>
+    </div>
+    <div class="carrito-container">
+        <div class="img-diasNaranjasContainer">
+            <img src="" alt="">
+        </div>
+        <div class="form-carrito">
+            <div class="OfertasDias">
+                <img class="ofertas" src="/ofertasDiasNaranjas.png" alt="">
+            </div>
+            <div class="price-container">
+                <p class="price">859<sup>00€</sup></p>
+            </div>
+            <div class="Envio">
+                <p class="envio"><i class="fa-solid fa-truck"></i> Envio: Gratis | Devolución: Gratis <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <div class="Tienda">
+                <p class="tienda"><i class="fa-solid fa-store"></i> Disponibilidad en tienda <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <div class="añadirAcesta">
+                <button class="btn añadirButton" (click)="goToCarrito()"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
+            </div>
+            <div class="Promociones">
+                <img class="promociones" src="/promociones.png" alt="" style="cursor: pointer;">
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

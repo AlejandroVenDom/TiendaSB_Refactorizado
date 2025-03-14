@@ -1,107 +1,115 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid py-0 my-0" style="cursor: po;" >
-      <a class="navbar-brand col-lg-6" (click)="homeRoute()" style="cursor: pointer;">
-        <img class="imagenLogo" src="/logo.svg" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" (click)="perfilRoute()" style="cursor: pointer;">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="carritoRoute()" style="cursor: pointer;">Cesta</a>
-          </li>
-    
-          <li class="nav-item">
-            <a class="buttonCloseSession nav-link border rounded mx-3 " style="cursor: pointer;" (click)="closeSession()">Cerrar Sesión</a>
-          </li>
-        </ul>
-      </div>
+<app-header-cliente></app-header-cliente>
+
+<section class="container">
+    <div class="user-info container py-5">
+        <img class="emoticonos" src="/ofertasEmoticonos.png" alt="">
     </div>
-</nav>
+</section>
+<section class="descount-section">
+    <div>
+        <div class="diasNaranjasContainer">
+            <img class="diasNaranjas" src="/DiasNaranjas.png" alt="">
+        </div>
+        <div class="container-descounts">
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Ofertas Top</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Ordenadores</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Portátiles</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Componentes</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Monitores</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Sonido</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Periféricos</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Smartphones</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Televisores</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Consolas y Videojuegos</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Tablets y Relojes</h2>
+            </div>
+            <div class="ofertas-cards">
+                <img src="/Top.png" class="img-ofertas" alt="">
+                <h2 class="ofertas-title">Hogar</h2>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</section>
+<main class="main-container container">
+    <section class="container-cards container">
+        <div class="cards" *ngFor="let product of products">
+            <div class="img-container">
+                <img src="/producto2.jpg" class="img-product" alt="">
+            </div>
 
-<main class="container">
-    <section class="container">
-        <div class="user-info container py-5">
-            <h1 class="text-center">¡Bienvenido de nuevo, {{username}}!</h1>
+            <div class="infoContainer">
+                <h2 class="title-card">{{product.name}}</h2>
+                <p>{{product.description}}</p>
+                <p class="price">{{product.price}} €</p>
+                <div class="buttons-container">
+                    <button class="btn agregarCesta" (click)="infoProductoRoute()"><i class="fa-solid fa-cart-plus"></i> Agregar</button>
+                    <button class="btn">
+                        <i class="fa-solid fa-star"></i>
+                    </button>
+                </div>
+            </div>
+
+
         </div>
     </section>
-    <section class="container">
-        <div class="OrangeProducts row">
-            <h2 class="col-9 d-flex align-items-center">¡Consigue ya las mejores ofertas de Días Naranjas!</h2>
-            <a style="cursor: pointer;" class="verOfertasLink col-3 d-flex align-items-center text-secondary">Ver ofertas 
-                <i class="mx-2 fa-solid fa-arrow-right d-flex align-items-center" ></i>  
-            </a>
-        </div>
-        <div></div>
-    </section>
 
-    <div class="card-container">
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen1.jpg" alt="Imagen 1">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Descripción breve de la tarjeta. Puedes agregar más contenido aquí.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen2.jpg" alt="Imagen 2">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Otra descripción para esta tarjeta.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen3.jpg" alt="Imagen 3">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Más información sobre esta tarjeta.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen4.jpg" alt="Imagen 4">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Descripción de la tarjeta 4.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen5.jpg" alt="Imagen 5">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Descripción de la tarjeta 5.</p>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-image">
-              <img src="imagen6.jpg" alt="Imagen 6">
-          </div>
-          <div class="card-info">
-              <h2>Título de la Card</h2>
-              <p>Descripción de la tarjeta 6.</p>
-          </div>
-      </div>
-
-
-  </div>
-    
 </main>
+<section class="container novedades-container">
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Portatiles.png" alt="">
+    </div>
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Componentes.png" alt="">
+    </div>
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Monitores.png" alt="">
+    </div>
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Televisores.png" alt="">
+    </div>
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Estrena.png" alt="">
+    </div>
+    <div class="novedades-title">
+        <img class="imgNovedades" src="/Conecta.png" alt="">
+    </div>
+</section>
+<section class="container-patterns">
+    <div class="pat1"><img src="/pat1.png" alt=""></div>
+    <div class="pat2"><img src="/pat2.png" alt=""></div>
+</section>
+<app-footer></app-footer>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

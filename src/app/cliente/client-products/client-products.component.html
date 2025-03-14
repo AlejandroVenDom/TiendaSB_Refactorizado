@@ -1,1 +1,24 @@
-<p>client-products works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<app-header-cliente></app-header-cliente>
+<div class="containerButtons">
+    <button class="btn" (click)="goToTienda()"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+    <button class="btn" (click)="goToPay()">Ir a pasarela de pago <i class="fa-solid fa-arrow-right"></i></button>
+</div>
+<section class="container carritoContainer">
+    <div class="imgBolsaContainer">
+        <img src="/bolsa.png" alt="">
+    </div>
+    <div class="carritoTitleContainer">
+        <h2>Carrito</h2>
+    </div>
+    <div class="carritoDescriptionContainer">
+        <p>No hay productos en tu carrito</p>
+        <p>Consulta todas nuestras ofertas</p>
+    </div>
+    <div>
+        <button class="btn btn-danger" (click)="goToTienda()"><i class="fa-solid fa-check"></i> Continuar Comprando</button>
+    </div>
+</section>
+
+<app-footer></app-footer>

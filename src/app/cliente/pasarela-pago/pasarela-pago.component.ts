@@ -4,19 +4,17 @@ import { FooterComponent } from "../../footer/footer.component";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-client-products',
+  selector: 'app-pasarela-pago',
   imports: [HeaderClienteComponent, FooterComponent],
-  templateUrl: './client-products.component.html',
-  styleUrl: './client-products.component.scss'
+  templateUrl: './pasarela-pago.component.html',
+  styleUrl: './pasarela-pago.component.scss'
 })
-export class ClientProductsComponent {
+export class PasarelaPagoComponent {
   constructor(private router: Router) {}
-  goToTienda():void {
+  goToTienda(): void {
     this.router.navigate(['/tienda']);
   }
-
-  goToPay():void {
-    this.router.navigate(['/payment']);
+  goToPay(): void {
+    this.router.navigate(['/checkout']);
   }
-
 }

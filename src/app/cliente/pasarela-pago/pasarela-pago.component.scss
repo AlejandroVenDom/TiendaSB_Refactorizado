@@ -1,0 +1,251 @@
+.TitlePayment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.titlePayment{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.SubtitlePayment{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(77, 77, 77);
+}
+.payment-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 1px solid rgb(121, 118, 118);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.img-product{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.old-price{
+    color: rgb(127, 0, 0);
+    font-weight: 700;
+    margin: 0;
+}
+.actual-price{
+    color: rgb(0, 127, 17);
+    font-weight: 700;
+}
+.product-info{
+    display: flex;
+    flex-direction: row;
+}
+.entrega{
+    font-size: 15px;
+    cursor: pointer;
+}
+.garantia-container{
+    cursor: pointer;
+}
+
+.Resumen{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.subResumen{
+    font-size: 9px;
+    font-weight: 400;
+    color: rgb(77, 77, 77);
+}
+.SubtotalResume{
+    display: flex;
+    justify-content: space-between;
+
+}
+.Subtotal{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.priceSubtotal{
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+
+.DescuentoResume{
+    display: flex;
+    justify-content: space-between;
+}
+.Descuento{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.priceDescuento{
+    font-size: 14px;
+    font-weight: 700;
+    color: green;
+}
+.CosteDeEnvio{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.CosteEnvio{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.priceEnvio{
+    font-size: 14px;
+    font-weight: 100;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.TotalResume{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.Total{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.priceTotal{
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+}
+
+.IVA{
+    margin: 0;
+}
+
+.includeIva{
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.añadirDescuentoContainer{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.descunetoTitle{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.btn-danger{
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+
+
+.btnTienda:hover{
+    color: #FF6600;}
+.fa-chevron-down{
+    margin-left: 5px;
+}
+.emoticons{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+.fa-thumbs-up{
+    font-size: 30px;
+    cursor: pointer;
+}
+.fa-trash{
+    font-size: 30px;
+    cursor: pointer;
+}
+.fa-thumbs-up:hover{
+    color:#FF6600 ;
+}
+.fa-trash:hover{
+    color: rgb(255, 0, 0);
+}
+
+.emoticons-pays{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.fa-apple-pay{
+    font-size: 30px;
+}
+.fa-google-pay{
+    font-size: 30px;
+}
+
+
+
+
+@media ((min-width: 300px) and (max-width: 574px)) {
+    .payment-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-product{
+        width: 300px;
+    }
+    .img-garantia{
+        width:320px;
+    }
+
+    .emoticons{
+        display: none;
+    }
+    .fa-thumbs-up{
+        display: none;
+    }
+    .fa-trash{
+        display: none;
+    }
+    
+}
+
+
+@media ((min-width: 575px) and (max-width: 1200px)) {
+    .payment-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
+    .img-product{
+        width: 400px;
+    }
+    .product-info2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .img-garantia{
+        width: 500px;
+    }
+    .emoticons{
+        display: none;
+    }
+    .fa-thumbs-up{
+        display: none;
+    }
+    .fa-trash{
+        display: none;
+    }
+    
+}

@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<app-header-cliente></app-header-cliente>
+<div class="container btns-container">
+    <button class="btn btnTienda" (click)="goToTienda()"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+</div>
+
+<section class="container pas-container">
+
+    <div class="container container-checkout">
+        <div class="metodos container">
+            <img class="imgMetodos" src="/metodos.png" alt="">
+        </div>
+        <div class="optionsEnvio">
+            <h5 class="MetodosEnvio">Detalles de envío</h5>
+        </div>
+        <div class="buttonsOptions container">
+            <button class="btn recogidaTienda"> <i class="fa-solid fa-shop"></i>Recogida en Tienda</button>
+            <button class="btn envioDomicilio"><i class="fa-solid fa-truck"></i>Entrega a domicilio</button>
+        </div>
+        <div class="Direccion">
+            <h5 class="MetodosDireccion">Dirección de entrega y facturación</h5>
+        </div>
+        <form action="" class="form-control">
+            <div class="radios">
+                <input type="radio" name="sr" value="Sr."> Sr.
+                <input type="radio" name="sr" id="Sra."> Sra.
+                <input type="radio" name="sr" id="Sin"> Sin especificación
+            </div>
+            <div class="nombreDiv">
+                <input class="form-control" type="text" name="name" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="apellidosDiv">
+                <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos"
+                    required>
+            </div>
+            <div class="DNI">
+                <input class="form-control" type="text" name="DNI" id="DNI" placeholder="NIF / NIE" required>
+            </div>
+            <hr>
+            <div class="text-telefono">
+                <h5 class="telefono">
+                    Introduce un número de teléfono para completar la compra.
+                </h5>
+            </div>
+            <div class="telefonoDiv">
+                <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono"
+                    value="+34 " required>
+            </div>
+            <div class="correoDiv">
+                <input class="form-control" type="email" name="correo" id="correo" placeholder="Correo electronico"
+                    required>
+            </div>
+            <div class="DireccionEnvioDiv">
+                <h5 class="titleDireccion">Utiliza búsqueda rápida <i class="fa-solid fa-magnifying-glass"></i></h5>
+                <input class="form-control" type="text" name="DireccionEnvio" id="DireccionEnvio"
+                    placeholder="Direccion de envio" required>
+            </div>
+        </form>
+
+    </div>
+    <div class="checkoutResume">
+        <div class="ResumeDiv">
+            <h5 class="titleResume">Resumen</h5>
+            <p class="subtitleResume">Los cupones se pueden añadir durante el proceso de pago</p>
+            <hr>
+            <div class="Subtotal">
+                <h5 class="sub-title">Subtotal</h5>
+                <p class="priceSubtotal">499.<sup>00€</sup><i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+            <div class="Descuento">
+                <h5 class="Descuento-title">Descuento</h5>
+                <p class="priceDescuento">-49.<sup>00€</sup><i class="fa-solid fa-chevron-down"></i></p>
+            </div>
+            <div class="CosteDeEnvio">
+                <h5 class="CosteEnvio-title">Coste de envio <i class="fa-solid fa-euro-sign"></i></h5>
+                <p class="priceEnvio">Gratis</p>
+            </div>
+            <hr>
+            <div class="Total">
+                <h5 class="Total-title">Total</h5>
+                <p class="priceTotal">450.<sup>00€</sup></p>
+            </div>
+            <div class="IVA">
+                <h5 class="includeIva">IVA inlcuido</h5>
+            </div>
+            <div class="tramitarPago">
+                <button class="btn btn-danger"><i class="fa-solid fa-check-to-slot"></i> Tramitar pago</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<app-footer></app-footer>

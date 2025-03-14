@@ -1,0 +1,28 @@
+.carritoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 254px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+.carritoDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.containerButtons{
+    display: flex;
+    justify-content: space-between;
+}

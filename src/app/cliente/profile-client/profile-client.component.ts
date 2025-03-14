@@ -3,10 +3,12 @@ import { UseStateService } from '../../services/auth/use-state.service';
 import { Router } from '@angular/router';
 import { PopupService } from '../../services/utils/popup.service';
 import { TokenService } from '../../services/auth/token.service';
+import { FooterComponent } from "../../footer/footer.component";
+import { HeaderClienteComponent } from "../header-cliente/header-cliente.component";
 
 @Component({
   selector: 'app-profile-client',
-  imports: [],
+  imports: [FooterComponent, HeaderClienteComponent],
   templateUrl: './profile-client.component.html',
   styleUrl: './profile-client.component.scss'
 })

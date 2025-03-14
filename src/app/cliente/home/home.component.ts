@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderClienteComponent } from "../header-cliente/header-cliente.component";
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [HeaderClienteComponent],
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

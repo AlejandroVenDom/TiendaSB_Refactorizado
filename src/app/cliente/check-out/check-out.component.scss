@@ -1,0 +1,180 @@
+.btnTienda:hover{
+    color: #FF6600;
+}
+.imgMetodos{
+    width: 100%;
+}
+
+.pas-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container-checkout{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+@media(max-width: 790px){
+    .pas-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.MetodosEnvio{
+    font-size: 20px;
+    font-weight: 700;
+}
+.buttonsOptions{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.recogidaTienda{
+    border: 1px solid #FF6600;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.recogidaTienda:hover{
+    background-color: #FF6600;
+    color: white;
+}
+.envioDomicilio{
+    border: 1px solid #FF6600;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+.envioDomicilio:hover{
+    background-color: #FF6600;
+    color: white;
+}
+.Direccion{
+    margin-top: 20px;
+}
+.MetodosDireccion{
+    font-size: 20px;
+    font-weight: 700;
+}   
+.radios{
+    margin-bottom: 20px;
+}
+.nombreDiv{
+    margin-bottom: 10px;
+}
+.apellidosDiv{
+    margin-bottom: 10px;
+}
+.DNI{
+    margin-bottom: 10px;
+}
+.text-telefono{
+    margin-top: 20px;
+}
+.telefono{
+    font-size: 12px;
+    color: rgb(77, 76, 76);
+}
+.telefonoDiv{
+    margin-bottom: 10px;
+}
+.correoDiv{
+    margin-bottom: 30px;
+}
+.titleDireccion{
+    font-size: 13px;
+    color: rgb(77, 76, 76);
+}
+.DireccionEnvioDiv{
+    margin-bottom: 10px;
+}
+.ResumeDiv{
+    background-color: #F5F5F5;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.titleResume{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0
+}
+.subtitleResume{
+    font-size: 12px;
+    color: rgb(77, 76, 76);
+    margin-bottom: 0
+}
+.Subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.priceSubtotal{
+    font-weight: 700;
+}
+.sub-title{
+    font-size: 13px;
+    font-weight: 700;
+}
+.priceDescuento{
+    font-weight: 700;
+    color: green;
+}
+.priceEnvio{
+    color: rgb(83, 81, 81);
+}
+.Descuento-title{
+    font-size: 13px;
+    font-weight: 700;
+    color: green;
+}
+.CosteEnvio-title{
+    font-size: 13px;
+    font-weight: 700;
+}
+.Total-title{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+.Descuento{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.CosteDeEnvio{
+    display: flex;
+    justify-content: space-between;
+}
+.Total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.priceTotal{
+    margin: 0;
+}
+.IVA{
+    display: flex;
+    margin: 0;
+}
+.includeIva{
+    margin: 0;
+    font-size: 12px;
+
+}
+.tramitarPago{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-danger{
+    background-color: red;
+}

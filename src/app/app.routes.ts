@@ -15,6 +15,10 @@ import { ProfileClientComponent } from './cliente/profile-client/profile-client.
 import { ClientProductsComponent } from './cliente/client-products/client-products.component';
 import { ProductsBackofficeComponent } from './backoffice/products-backoffice/products-backoffice.component';
 import { CreateProductsComponent } from './backoffice/create-products/create-products.component';
+import { ProductInfoComponent } from './cliente/product-info/product-info.component';
+import { PasarelaPagoComponent } from './cliente/pasarela-pago/pasarela-pago.component';
+import { CheckOutComponent } from './cliente/check-out/check-out.component';
+
 
 export const routes: Routes = [
 
@@ -27,7 +31,10 @@ export const routes: Routes = [
       {path: "registro", component: RegistroComponent, canActivate: [publicGuard]}, // -> www.ejemplo.com/registro
       {path: "tienda", component: TiendaComponent}, // www.ejemplo.com/tienda
       { path: "clientProfile", component: ProfileClientComponent },
-      { path: "clientProducts", component: ClientProductsComponent }
+      { path: "clientProducts", component: ClientProductsComponent },
+      {path:"info", component: ProductInfoComponent},
+      {path:"payment", component: PasarelaPagoComponent},
+      {path:"checkout", component: CheckOutComponent},
     ]
   },
   // backoffice

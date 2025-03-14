@@ -5,3 +5,23 @@ nav {
 .btn-white {
   background-color: var(--bs-white);
 }
+
+img{
+  width: 100px;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.btn{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 990px) {
+  .btn{
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+}

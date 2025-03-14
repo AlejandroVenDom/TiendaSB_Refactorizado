@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<app-header-cliente></app-header-cliente>
+<div class="buttons-container">
+    <button class="btn btnTienda" (click)="goToTienda()"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+</div>
+<div class="TitlePayment-container container">
+    <h5 class="titlePayment">Carrito</h5>
+    <p class="SubtitlePayment">Los productos de la cesta de la compra no están reservados</p>
+</div>
+<section class="container payment-container">
+        <div class="img-container">
+            <img class="img-product" src="/producto2.jpg">
+            <div class="emoticons">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-trash"></i>
+            </div>
+            
+        </div>
+        <div class="product-info2">
+            <div class="description">
+                <h5>PcCom Ready Intel Core i5-12400F / 32 GB / 1TB SSD / RTX 4060</h5>
+                <p class="old-price"><s>699.<sup>00€</sup></s></p>
+                <p class="actual-price">499.<sup>00€</sup></p>
+                <p class="entrega"><i class="fa-solid fa-clock"></i> Entrega a domicilio</p>
+            </div>
+            <hr>
+            <!-- <div class="garantia-container">
+                <img class="img-garantia" src="/garantia.png" alt="">
+            </div> -->
+        </div>
+    <div class="container payment-resume">
+        <div class="titleResume">
+            <h5 class="Resumen">Resumen</h5>
+            <p class="subResumen">Los cupones se pueden añadir durante el proceso de pago</p>
+        </div>
+        <hr>
+        <div class="SubtotalResume">
+            <h5 class="Subtotal">Subtotal</h5>
+            <p class="priceSubtotal">499.<sup>00€</sup><i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+        <div class="DescuentoResume">
+            <h5 class="Descuento">Descuento</h5>
+            <p class="priceDescuento">-49.<sup>00€</sup><i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+        <div class="CosteDeEnvio">
+            <h5 class="CosteEnvio">Coste de envio <i class="fa-solid fa-euro-sign"></i></h5>
+            <p class="priceEnvio">Gratis</p>
+        </div>
+        <hr>
+        <div class="TotalResume">
+            <h5 class="Total">Total</h5>
+            <p class="priceTotal">450.<sup>00€</sup></p>
+        </div>
+        <div class="IVA">
+            <h5 class="includeIva">IVA inlcuido</h5>
+        </div>
+        <div class="añadirDescuentoContainer">
+            <h5 class="descunetoTitle">Añadir código de descuento</h5>
+            <input type="text" placeholder="...">
+        </div>
+        <div class="buttonsPayment">
+            <button class="btn btn-danger" (click)="goToPay()"><i class="fa-solid fa-cart-shopping"></i> Tramitar Pago</button>
+        </div>
+        <div class="emoticons-pays">
+            <i class="fa-brands fa-apple-pay"></i>
+            <i class="fa-brands fa-google-pay"></i>
+        </div>
+        
+    </div>
+</section>
+<app-footer></app-footer>

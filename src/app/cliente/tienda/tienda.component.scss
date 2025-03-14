@@ -8,65 +8,250 @@
   background-color: red;
   color: white;
 }
-.verOfertasLink{
-    text-decoration: none;
 
+.descount-section{
+  width: 100%;
+  background-color: #FF6600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 50px;
 }
-
-.card-container {
+.container-cards{
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
 }
 
-.card {
+.cards{
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #FF6600;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  cursor: pointer;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+  
+}
+.cards:hover{
+  transform: scale(1.01);
+}
+
+.img-product{
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+} 
+
+.img-ofertas{
+  width: 80px;
+  height: 80px;
+  border: 4px solid white;
+  border-radius: 15px;
+  
+}
+
+.diasNaranjas{
+  border-radius: 15px;
+}
+.diasNaranjas:hover{
+  transform: scale(1.01);
+}
+
+.diasNaranjasContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.container-descounts{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.ofertas-cards{
+  width: 210px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #d95700;
+  cursor: pointer;
+}
+.ofertas-cards:hover{
+  transform: scale(1.01);
+}
+.user-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.novedades-container{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.novedades-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgNovedades{
   border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.imgNovedades:hover{
+  transform: scale(1.01);
+}
 
-  .card-image {
+.container-patterns{
+  margin-top:50px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 470px) {
+  .diasNaranjas{
+   display: none;
+  }
+  .emoticonos{
+    display: none;
+  }
+  .container-descounts{
+    grid-template-columns: repeat(1, 1fr); 
     width: 100%;
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    padding: 0;    
+    gap: 10px;
+  }
+  .descount-section{
+    display: none;
   }
 
-  .card-info {
-    padding: 15px;
-    text-align: center;
+  .container-cards{
+    grid-template-columns: repeat(1, 1fr);
   }
-}
-
-@media (min-width: 768px) {
-  .card {
-    flex-direction: row;
-    align-items: center;
-
-    .card-image {
-      flex: 1;
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .card-info {
-      flex: 1;
-      text-align: left;
-    }
+  .novedades-container{
+    display: none;
+  }
+  .container-patterns{
+    display: none;
   }
 }
 
-@media (min-width: 1024px) {
-  .card-container {
+@media ( (min-width: 471px) and (max-width: 720px)) {
+  .container-descounts{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-cards{
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+  .diasNaranjas{
+    width: 100%;
+  }
+  .emoticonos{
+    width: 100%;
+  }
+  .novedades-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-patterns{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .pat1{
+    display: none;
+  }
+  .pat2{
+    display: none;
+  }
+}
+
+@media ((min-width: 721px) and (max-width: 1100px)) {
+  .container-descounts{
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .container-cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diasNaranjas{
+    width: 100%;
+  }
+  .emoticonos{
+    width: 100%;
+  }
+  .novedades-container{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  }
+  .container-patterns{
+    display: flex;
+    flex-direction: column;
+  }
+  .pat2{
+    margin-right: 40px;
   }
 }
 
+@media ((min-width: 1101px) and (max-width: 1430px) ) {
+  .container-descounts{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .diasNaranjas{
+    width: 100%;
+  }
+  .emoticonos{
+    width: 100%;
+  }
+  .novedades-container{
+  grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+}
+.ofertas-title{
+  width: 90px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  margin-left: 12px;
+}
+
+.title-card{
+  font-weight: 900;
+  font-size: 25px;
+}
+.infoContainer{
+  padding: 10px;
+}
+.buttons-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.agregarCesta{
+  border-radius: 20px;
+  background-color: rgb(6, 0, 48);
+  color: white;
+}
+
+.fa-star{
+  font-size: 20px;
+}
+.price{
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(156, 2, 2);
+}
