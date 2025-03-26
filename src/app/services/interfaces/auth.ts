@@ -11,6 +11,7 @@ export interface UserInterface {
 }
 
 export interface ProductInterface {
+  
   name: string;
   description: string;
   image: string;
@@ -18,6 +19,7 @@ export interface ProductInterface {
   tax: number;
   currencyName: "EUR"|"USD";
   userName?:string;
+
 }
 
 

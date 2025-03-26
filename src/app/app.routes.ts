@@ -20,6 +20,7 @@ import { PasarelaPagoComponent } from './cliente/pasarela-pago/pasarela-pago.com
 import { CheckOutComponent } from './cliente/check-out/check-out.component';
 
 
+
 export const routes: Routes = [
 
   // cliente
@@ -35,6 +36,7 @@ export const routes: Routes = [
       {path:"info", component: ProductInfoComponent},
       {path:"payment", component: PasarelaPagoComponent},
       {path:"checkout", component: CheckOutComponent},
+      
     ]
   },
   // backoffice

@@ -21,40 +21,12 @@
         <div class="Direccion">
             <h5 class="MetodosDireccion">Dirección de entrega y facturación</h5>
         </div>
-        <form action="" class="form-control">
-            <div class="radios">
-                <input type="radio" name="sr" value="Sr."> Sr.
-                <input type="radio" name="sr" id="Sra."> Sra.
-                <input type="radio" name="sr" id="Sin"> Sin especificación
-            </div>
+        <form action="" class="form-control"  (ngSubmit)="getPay()" [formGroup]="checkOutForm">
             <div class="nombreDiv">
-                <input class="form-control" type="text" name="name" id="name" placeholder="Nombre" required>
+                <input class="form-control"  formControlName="name" type="text" name="name" id="name" placeholder="Nombre" required>
             </div>
             <div class="apellidosDiv">
-                <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos"
-                    required>
-            </div>
-            <div class="DNI">
-                <input class="form-control" type="text" name="DNI" id="DNI" placeholder="NIF / NIE" required>
-            </div>
-            <hr>
-            <div class="text-telefono">
-                <h5 class="telefono">
-                    Introduce un número de teléfono para completar la compra.
-                </h5>
-            </div>
-            <div class="telefonoDiv">
-                <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono"
-                    value="+34 " required>
-            </div>
-            <div class="correoDiv">
-                <input class="form-control" type="email" name="correo" id="correo" placeholder="Correo electronico"
-                    required>
-            </div>
-            <div class="DireccionEnvioDiv">
-                <h5 class="titleDireccion">Utiliza búsqueda rápida <i class="fa-solid fa-magnifying-glass"></i></h5>
-                <input class="form-control" type="text" name="DireccionEnvio" id="DireccionEnvio"
-                    placeholder="Direccion de envio" required>
+                <input class="form-control" formControlName="price" type="text" name="price" id="price">
             </div>
         </form>
 
@@ -85,10 +57,11 @@
                 <h5 class="includeIva">IVA inlcuido</h5>
             </div>
             <div class="tramitarPago">
-                <button class="btn btn-danger"><i class="fa-solid fa-check-to-slot"></i> Tramitar pago</button>
+                <button type="submit" [disabled]="checkOutForm.invalid" class="btn btn-danger"><i class="fa-solid fa-check-to-slot"></i> Pagar con Paypal</button>
             </div>
         </div>
-
+        
     </div>
 </section>
+<app-check-out-pay-pal *ngIf="showPayPalButton" ></app-check-out-pay-pal>
 <app-footer></app-footer>
